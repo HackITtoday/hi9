@@ -1,13 +1,22 @@
 {
-  "name": "polymer-starter-kit",
+  "name": "hi9 app",
   "private": true,
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0",
-    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
-    "platinum-elements": "PolymerElements/platinum-elements#^1.1.0",
-    "neon-elements": "PolymerElements/neon-elements#^1.0.0",
-    "page": "visionmedia/page.js#~1.6.3"
+    "iron-elements": "PolymerElements/iron-elements#1.0.0",
+    "paper-elements": "PolymerElements/paper-elements#1.0.1",
+    "platinum-elements": "PolymerElements/platinum-elements#1.0.1",
+    "neon-elements": "PolymerElements/neon-elements#1.0.0",
+    "page": "visionmedia/page.js#~1.6.3",
+    "site-list": "HackITtoday/site-list",
+    "paper-filter": "HackITtoday/paper-filter#v0.0.2",
+    "firebase-element": "HackITtoday/firebase-element#~1.0.1",
+    "hi9-login": "HackITtoday/hi9-login",
+    "google-sheets": "GoogleWebComponents/google-sheets#~1.0.4",
+    "iron-list": "PolymerElements/iron-list#~1.0.1",
+    "paper-progress": "PolymerElements/paper-progress#~1.0.1",
+    "google-analytics": "GoogleWebComponents/google-analytics#~1.0.2",
+    "google-chart": "GoogleWebComponents/google-chart#~1.0.2",
+    "sortable-list":"marcus7777/sortable-list"
   },
   "devDependencies": {
     "web-component-tester": "*",
