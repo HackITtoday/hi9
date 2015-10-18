@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/firebase-element/firebase-document.html">
+
+<dom-module id="firebase-data">
+  <template>
+    <firebase-document data="{{data}}" location="{{userUrl}}">
+    </firebase-document>
+  </template>
+</dom-module>
+<script>
+  (function () {
+    Polymer({
+      is: 'firebase-data',
+      properties: {
+        data:{ 
+          type: Object, notify: true, observer: '_dataChanged'
+        },
+        userUrl: {
+          computed:"getUserDataUrl(uid)"
+        },
+        ui                                                                                                                                                                                                                                             d: String
+      },
+      getUserDataUrl: function(uid) {
+        return "https://hi9site.firebaseio.com/users/" + uid;
+      },
+      get(val){
+        return val
+      },
+      _dataChanged: function(data) {
+        if (!data) {
+          this.data = {};
+        }
+      }
+    });
+  })();
+</script>
