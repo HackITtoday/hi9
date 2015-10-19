@@ -74,13 +74,11 @@
 				<span>Privacy</span>
 			  </a>
 			
-			<template is="dom-if" if="{{!show_model}}">
-				<a data-route="user" href="/user">
-					<iron-icon icon="info"></iron-icon>
-					<span>Account</span>
-				</a>
-			</template>
-
+			  <a data-route="account" href="/account" on-click="onDataRouteClick">
+				<iron-icon icon="info"></iron-icon>
+				<span>Account</span>
+			  </a>
+			
 			  <a data-route="contact" href="/contact" on-click="onDataRouteClick">
 				<iron-icon icon="mail"></iron-icon>
 				<span>Contact</span>
@@ -125,6 +123,12 @@
             <section data-route="privacy">
 				<paper-material elevation="1">
 					<privacy-page></privacy-page>
+				</paper-material>
+			</section>
+			  
+			<section data-route="account">
+				<paper-material elevation="1">
+					<account-page></account-page>
 				</paper-material>
 			</section>
 
