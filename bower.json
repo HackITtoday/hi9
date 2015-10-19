@@ -16,8 +16,7 @@
     "paper-progress": "PolymerElements/paper-progress#~1.0.1",
     "google-analytics": "GoogleWebComponents/google-analytics#~1.0.2",
     "google-chart": "GoogleWebComponents/google-chart#~1.0.2",
-    "sortable-list": "marcus7777/sortable-list",
-    "mediator-data": "marcus7777/mediator-data"
+    "sortable-list": "marcus7777/sortable-list"
   },
   "devDependencies": {
     "web-component-tester": "*",
