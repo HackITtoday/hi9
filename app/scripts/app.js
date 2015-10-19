@@ -65,10 +65,10 @@
   };
 
   // Scroll page to top and expand header
-  app.scrollPageToTop = function() {
+/*   app.scrollPageToTop = function() {
     document.getElementById('mainContainer').scrollTop = 0;
   };
-	 
+	  */
   app.waterfall = function(user) { 
     if ((user === null) || !user.hasOwnProperty('uid')) {
       return 'waterfall-tall';
