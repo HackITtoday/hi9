@@ -2,158 +2,174 @@
 <html lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Hi9 Web App" />
-  <title>Hi9 - Digital Portal to All</title>
-  <!-- Place favicon.ico in the `app/` directory -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="Hi9 Web App" />
+	<title>Hi9 - Digital Portal to All</title>
+	<!-- Place favicon.ico in the `app/` directory -->
 
-  <!-- Chrome for Android theme color -->
-  <meta name="theme-color" content="#2E3AA1">
+	<!-- Chrome for Android theme color -->
+	<meta name="theme-color" content="#2E3AA1">
 
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
 
-  <!-- Tile color for Win8 -->
-  <meta name="msapplication-TileColor" content="#3372DF">
+	<!-- Tile color for Win8 -->
+	<meta name="msapplication-TileColor" content="#3372DF">
 
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Hi9">
-  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Hi9">
+	<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Hi9">
-  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Hi9">
+	<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
-  <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<!-- Tile icon for Win8 (144x144) -->
+	<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
 
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild-->
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild-->
 
-  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <!-- endbuild -->
+	<!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<!-- endbuild -->
 
-  <!-- will be replaced with elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
-  <!-- endreplace-->
+	<!-- will be replaced with elements/elements.vulcanized.html -->
+	<link rel="import" href="elements/elements.html">
+	<!-- endreplace-->
 
-  <!-- For shared styles, shared-styles.html import in elements.html -->
-  <style is="custom-style" include="shared-styles"></style>
+	<!-- For shared styles, shared-styles.html import in elements.html -->
+	<style is="custom-style" include="shared-styles"></style>
 
 </head>
 
 <body unresolved class="fullbleed layout vertical">
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
+	<span id="browser-sync-binding"></span>
+	<template is="dom-bind" id="app">
 
-    <paper-drawer-panel id="paperDrawerPanel">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
+		<paper-drawer-panel id="paperDrawerPanel">
+			<!-- Drawer Scroll Header Panel -->
+			<paper-scroll-header-panel drawer fixed>
 
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Menu</span>
-        </paper-toolbar>
+				<!-- Drawer Toolbar -->
+				<paper-toolbar id="drawerToolbar">
+					<span class="paper-font-title">Menu</span>
+				</paper-toolbar>
 
-        <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-			  <a data-route="home" href="/" on-click="onDataRouteClick">
-				<iron-icon icon="home"></iron-icon>
-				<span>Home</span>
-			  </a>
+				<!-- Drawer Content -->
+				<paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+					<a data-route="home" href="/" on-click="onDataRouteClick">
+						<iron-icon icon="home"></iron-icon>
+						<span>Home</span>
+					</a>
 
-			  <a data-route="privacy" href="/privacy" on-click="onDataRouteClick">
-				<iron-icon icon="info"></iron-icon>
-				<span>Privacy</span>
-			  </a>
-			
-			  <a data-route="newaccount" href="/newaccount" on-click="onDataRouteClick">
-				<iron-icon icon="info"></iron-icon>
-				<span>New Account</span>
-			  </a>
-			
-			  <a data-route="contact" href="/contact" on-click="onDataRouteClick">
-				<iron-icon icon="mail"></iron-icon>
-				<span>Contact</span>
-			  </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
+					<a data-route="privacy" href="/privacy" on-click="onDataRouteClick">
+						<iron-icon icon="info"></iron-icon>
+						<span>Privacy</span>
+					</a>
 
-      <!-- Main Area -->
-      <paper-scroll-header-panel main mode="{{waterfall(user)}}" condenses keep-condensed-header>
+					<a data-route="newaccount" href="/newaccount" on-click="onDataRouteClick">
+						<iron-icon icon="info"></iron-icon>
+						<span>New Account</span>
+					</a>
 
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <span class="flex"></span>
+					<template is="dom-if" if="{{!show_model}}">
+						<a data-route="account" href="/account">
+							<iron-icon icon="info"></iron-icon>
+							<span>Account</span>
+						</a>
+					</template>
 
-          <!-- Toolbar icons -->
-           <hi9-login role="{{role}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
+					<a data-route="contact" href="/contact" on-click="onDataRouteClick">
+						<iron-icon icon="mail"></iron-icon>
+						<span>Contact</span>
+					</a>
+				</paper-menu>
+			</paper-scroll-header-panel>
 
-          <!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div class="app-name">Hi9 - Digital Portal for All</div>
-          </div>
+			<!-- Main Area -->
+			<paper-scroll-header-panel main mode="{{waterfall(user)}}" condenses keep-condensed-header>
 
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">Please Login or For New Accounts goto <a href="/#!/newaccount">New Account Page</a></div>
-          </div>
+				<!-- Main Toolbar -->
+				<paper-toolbar id="mainToolbar" class="tall">
+					<paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+					<span class="flex"></span>
 
-        </paper-toolbar>
+					<!-- Toolbar icons -->
+					<hi9-login role="{{role}}" hidden$="{{!show_model}}" show_model="{{show_model}}" user="{{user}}"></hi9-login>
 
-        <!-- Main Content -->
-        <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+					<!-- Application name -->
+					<div class="middle middle-container center horizontal layout">
+						<div class="app-name">Hi9 - Digital Portal for All</div>
+					</div>
 
-            <section data-route="home">
-			  <site-list></site-list>
-              <paper-material elevation="1">
-				<p class="paper-font-body2"><a>Helping People Get Connected</a></p>
-			  </paper-material>
-		    </section>
-              
-            <section data-route="privacy">
-				<paper-material elevation="1">
-					<privacy-page></privacy-page>
-				</paper-material>
-			</section>
-			  
-			<section data-route="newaccount">
-				<paper-material elevation="1">
-					<newaccount-page></newaccount-page>
-				</paper-material>
-			</section>
+					<!-- Application sub title -->
+					<div class="bottom bottom-container center horizontal layout">
+						<div class="bottom-title paper-font-subhead">Please Login or For New Accounts goto <a href="/#!/newaccount">New Account Page</a>
+						</div>
+					</div>
 
-			<section data-route="user">
-				<paper-material elevation="1">
-                	<user-page user="{{user}}" >
-                  <hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
-                  <firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
-				  </user-page>
-				</paper-material>
-			</section>
-            
-            <section data-route="contact">
-				<paper-material elevation="1">
-					<contact-page></contact-page>
-				</paper-material>
-			</section>
+				</paper-toolbar>
 
-          </iron-pages>
-        </div>
-      </paper-scroll-header-panel>
-    </paper-drawer-panel>
+				<!-- Main Content -->
+				<div class="content">
+					<iron-pages attr-for-selected="data-route" selected="{{route}}">
 
-    <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
+						<section data-route="home">
+							<site-list></site-list>
+							<paper-material elevation="1">
+								<p class="paper-font-body2"><a>Helping People Get Connected</a>
+								</p>
+							</paper-material>
+						</section>
+
+						<section data-route="privacy">
+							<paper-material elevation="1">
+								<privacy-page></privacy-page>
+							</paper-material>
+						</section>
+
+						
+						<section data-route="newaccount">
+							<paper-material elevation="1">
+								<newaccount-page></newaccount-page>
+							</paper-material>
+						</section>
+
+						<section data-route="account">
+							<paper-material elevation="1">
+								<account-page></account-page>
+							</paper-material>
+						</section>
+
+						<section data-route="user">
+							<paper-material elevation="1">
+								<user-page user="{{user}}">
+									<hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
+									<firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
+								</user-page>
+							</paper-material>
+						</section>
+
+						<section data-route="contact">
+							<paper-material elevation="1">
+								<contact-page></contact-page>
+							</paper-material>
+						</section>
+
+					</iron-pages>
+				</div>
+			</paper-scroll-header-panel>
+		</paper-drawer-panel>
+
+		<!-- Uncomment next block to enable Service Worker support (1/2) -->
+		<!--
     <paper-toast id="caching-complete"
                  duration="6000"
                  text="Caching complete! This app will work offline.">
@@ -169,11 +185,11 @@
     </platinum-sw-register>
     -->
 
-  </template>
+	</template>
 
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
+	<!-- build:js scripts/app.js -->
+	<script src="scripts/app.js"></script>
+	<!-- endbuild-->
 </body>
 
 </html>
