@@ -73,11 +73,13 @@
 						<iron-icon icon="info"></iron-icon>
 						<span>Privacy</span>
 					</a>
-
-					<a data-route="newaccount" href="/newaccount" on-click="onDataRouteClick">
-						<iron-icon icon="info"></iron-icon>
-						<span>New Account</span>
-					</a>
+					
+					<template is="dom-if" if="{{show_model}}">
+						<a data-route="newaccount" href="/newaccount" on-click="onDataRouteClick">
+							<iron-icon icon="info"></iron-icon>
+							<span>New Account</span>
+						</a>
+					</template>
 
 					<template is="dom-if" if="{{!show_model}}">
 						<a data-route="account" href="/account">
