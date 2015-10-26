@@ -81,7 +81,7 @@
 						</a>
 					</template>
 
-					<template is="dom-if" if="{{!show_model}}">
+					<template is="dom-if" if="{{user}}">
 						<a data-route="account" href="/account">
 							<iron-icon icon="info"></iron-icon>
 							<span>Account</span>
@@ -112,11 +112,11 @@
 					</div>
 
 					<!-- Application sub title -->
-					<div class="bottom bottom-container center horizontal layout">
-						<div class="bottom-title paper-font-subhead">Please Login or For New Accounts goto <a href="/#!/newaccount">New Account Page</a>
-						</div>
-					</div>
-
+					<template is="dom-if" if="{{!user}}">
+					  <div class="bottom bottom-container center horizontal layout">
+						  <div class="bottom-title paper-font-subhead">Please Login or For New Accounts goto <a href="/#!/newaccount">New Account Page</a></div>
+					  </div>
+					</template>
 				</paper-toolbar>
 
 				<!-- Main Content -->
