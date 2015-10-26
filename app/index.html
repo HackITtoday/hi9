@@ -126,8 +126,7 @@
 						<section data-route="home">
 							<site-list></site-list>
 							<paper-material elevation="1">
-								<p class="paper-font-body2"><a>Helping People Get Connected</a>
-								</p>
+								<p class="paper-font-body2"><a>Helping People Get Connected</a></p>
 							</paper-material>
 						</section>
 
@@ -153,6 +152,7 @@
 						<section data-route="user">
 							<paper-material elevation="1">
 								<user-page user="{{user}}">
+								  <user-badges edit="true" location="https://hi9site.firebaseio.com/" folder="[[user.uid]]"></user-badges>
 									<hi9-login role="{{role}}" show_model="{{show_model}}" user="{{user}}" data="{{userData}}"></hi9-login>
 									<firebase-data data="{{userData}}" uid="[[user.uid]]"></firebase-data>
 								</user-page>
