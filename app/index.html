@@ -82,7 +82,7 @@
 					</template>
 
 					<template is="dom-if" if="{{user}}">
-						<a data-route="account" href="/account">
+						<a data-route="account" href="/account" on-click="onDataRouteClick">
 							<iron-icon icon="info"></iron-icon>
 							<span>Account</span>
 						</a>
