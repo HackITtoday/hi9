@@ -24,6 +24,8 @@
     "test-fixture": "PolymerElements/test-fixture#^1.0.0"
   },
   "resolutions": {
-    "polymer": "^1.0.0"
+    "polymer": "^1.0.0",
+    "iron-icon": "master",
+    "iron-icons": "master"
   }
 }
